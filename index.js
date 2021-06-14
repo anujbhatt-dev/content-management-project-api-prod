@@ -17,7 +17,7 @@ console.log(pathToFile);
 
 const resources = () => JSON.parse(fs.readFileSync(pathToFile));
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get("/", (req,res)=>{
    res.send("<h1>Hello World</h1>")
